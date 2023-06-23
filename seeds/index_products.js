@@ -12,7 +12,7 @@ db.once('open', function () {
     console.log("connection open!!!!")
 })
 
-// console.log(products[0]);
+console.log(products[0]);
 const seedDB = async () => {
     await Product.deleteMany({});
     for (let i = 0; i < 20; i++) {

@@ -5,6 +5,7 @@ const Product= require('./models/product');
 const methodOverride = require('method-override')
 const product = require('./models/product');
 const bodyParser = require('body-parser')
+const ejsMate = require('ejs-mate')
 
 
 
@@ -15,6 +16,7 @@ db.once('open', function () {
     console.log("connection open!!!!")
 })
 const app = express();
+app.engine('ejs',ejsMate)
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
